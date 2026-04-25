@@ -1,0 +1,63 @@
+name: Sync upstream thinking skills
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: git remote add upstream https://github.com/tjboudreaux/cc-thinking-skills.git
+
+      - name: Fetch upstream
+        run: git fetch upstream main
+
+      - name: Create sync branch
+        run: git checkout -B sync/upstream-thinking-skills
+
+      - name: Merge upstream
+        run: git merge upstream/main --no-edit
+
+      - name: Validate wrapper files
+        run: |
+          python3 -m json.tool .claude-plugin/plugin.json >/dev/null
+          python3 -m json.tool .codex-plugin/plugin.json >/dev/null
+          test -d skills
+          find skills -name SKILL.md -type f | grep -q .
+          node scripts/validate-skills.js
+
+      - name: Push sync branch
+        run: git push origin sync/upstream-thinking-skills --force-with-lease
+
+      - name: Open sync pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr view sync/upstream-thinking-skills --json number >/dev/null 2>&1 || \
+            gh pr create \
+              --base main \
+              --head sync/upstream-thinking-skills \
+              --title "Sync upstream tjboudreaux/cc-thinking-skills" \
+              --body-file - <<'BODY'
+            Automated sync from `tjboudreaux/cc-thinking-skills`.
+
+            Review vendored `skills/` changes before merge.
+          BODY
