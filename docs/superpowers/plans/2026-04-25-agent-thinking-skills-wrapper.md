@@ -64,7 +64,7 @@ Create `.codex-plugin/plugin.json` with:
     "name": "TJ Boudreaux",
     "url": "https://github.com/tjboudreaux"
   },
-  "repository": "https://github.com/hbanerjee74/agent-thinking-skills"
+  "repository": "https://github.com/accelerate-data/agent-thinking-skills"
 }
 ```
 
@@ -317,7 +317,7 @@ In `/Users/hbanerjee/src/plugin-marketplace/.claude-plugin/marketplace.json`, en
   "description": "39 mental models and frameworks for critical thinking in Claude Code",
   "source": {
     "source": "url",
-    "url": "https://github.com/hbanerjee74/agent-thinking-skills.git"
+    "url": "https://github.com/accelerate-data/agent-thinking-skills.git"
   }
 }
 ```
@@ -334,7 +334,7 @@ In `/Users/hbanerjee/src/plugin-marketplace/.agents/plugins/marketplace.json`, e
   "name": "thinking-skills",
   "source": {
     "source": "url",
-    "url": "https://github.com/hbanerjee74/agent-thinking-skills.git"
+    "url": "https://github.com/accelerate-data/agent-thinking-skills.git"
   },
   "policy": {
     "installation": "AVAILABLE",

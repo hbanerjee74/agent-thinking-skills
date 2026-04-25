@@ -63,7 +63,7 @@ fork after `.codex-plugin/plugin.json` exists:
 ```json
 {
   "source": "url",
-  "url": "https://github.com/hbanerjee74/agent-thinking-skills.git"
+  "url": "https://github.com/accelerate-data/agent-thinking-skills.git"
 }
 ```
 

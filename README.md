@@ -4,9 +4,9 @@
 
 A comprehensive collection of thinking skills for [Claude Code](https://claude.ai/claude-code) that enhance AI-assisted problem solving, decision making, and strategic analysis. These skills provide structured frameworks based on proven mental models from leaders in systems thinking, cognitive science, and strategic analysis.
 
-[![Claude Code Skills](https://img.shields.io/badge/Claude_Code-Skills-7C3AED?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMiA3TDEyIDEyTDIyIDdMMTIgMloiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMiAxN0wxMiAyMkwyMiAxNyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yIDEyTDEyIDE3TDIyIDEyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+)](https://github.com/tjboudreaux/cc-thinking-skills)
+[![Claude Code Skills](https://img.shields.io/badge/Claude_Code-Skills-7C3AED?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMiA3TDEyIDEyTDIyIDdMMTIgMloiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMiAxN0wxMiAyMkwyMiAxNyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yIDEyTDEyIDE3TDIyIDEyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+)](https://github.com/accelerate-data/agent-thinking-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Skills Count](https://img.shields.io/badge/Skills-39-blue)](https://github.com/tjboudreaux/cc-thinking-skills)
+[![Skills Count](https://img.shields.io/badge/Skills-39-blue)](https://github.com/accelerate-data/agent-thinking-skills)
 
 ## Features
 
@@ -24,7 +24,7 @@ Install directly in Claude Code using the plugin system:
 
 ```bash
 # Add the marketplace
-/plugin marketplace add tjboudreaux/cc-thinking-skills
+/plugin marketplace add accelerate-data/agent-thinking-skills
 
 # Install the plugin
 /plugin install thinking-skills@thinking-skills-marketplace
@@ -36,13 +36,13 @@ Clone and copy skills directly:
 
 ```bash
 # Clone the repository
-git clone https://github.com/tjboudreaux/cc-thinking-skills.git
+git clone https://github.com/accelerate-data/agent-thinking-skills.git
 
 # Copy skills to your global Claude Code config
-cp -r cc-thinking-skills/skills/* ~/.claude/skills/
+cp -r agent-thinking-skills/skills/* ~/.claude/skills/
 
 # Or copy to a specific project
-cp -r cc-thinking-skills/skills/* /path/to/your/project/.claude/skills/
+cp -r agent-thinking-skills/skills/* /path/to/your/project/.claude/skills/
 ```
 
 ### Development: Load as Local Plugin
@@ -50,7 +50,7 @@ cp -r cc-thinking-skills/skills/* /path/to/your/project/.claude/skills/
 For testing or development:
 
 ```bash
-claude --plugin-dir ./cc-thinking-skills
+claude --plugin-dir ./agent-thinking-skills
 ```
 
 ### Usage
